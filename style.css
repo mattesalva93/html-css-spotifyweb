@@ -12,7 +12,7 @@ body{
 }
 
 header{
-    min-height: 91vh;
+    min-height: 92vh;
     width: 30px;
     background-color: black;
     position: absolute;
@@ -46,6 +46,8 @@ footer{
 nav{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 90vh;
 }
 
 .icon{
@@ -84,6 +86,9 @@ nav{
     display: none;
 }
 .playlist{
+    display: none;
+}
+.nav.bot hr{
     display: none;
 }
 
@@ -144,4 +149,9 @@ nav{
     .playlist{
         display: block;
     }
+
+    .nav.bot hr{
+        display: block;
+    }
+    
 }
