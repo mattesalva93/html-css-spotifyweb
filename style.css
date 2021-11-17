@@ -11,19 +11,18 @@ body{
 
 header{
     height: 90%;
-    width: 10%;
+    width: 50px;
     background-color: black;
     position: absolute;
 }
 main{
-    width: 100%;
+    width: 100vw;
     height: 80%;
     background-color: green;
     overflow-y: auto;
-    text-align: right;
 }
 section{
-    width: 90%;
+    width: 95%;
     height: 10%;
     background-color: yellow;
     float: right;
@@ -35,10 +34,11 @@ footer{
     position: fixed;
 }
 
-@media screen and (min-width: 577px) and (max-width: 768px) {
+@media screen and (min-width: 577px) {
         
     header{
-        width: 40%;
+        width: 200px;
     }
-
+    
 }
+
