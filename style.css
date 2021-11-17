@@ -28,9 +28,10 @@ main{
 section{
     width: 95%;
     min-height: 100px;
-    background-color: yellow;
+    background-color: violet;
     float: right;
 }
+
 footer{
     min-width: 100vw;
     min-height: 100px;
@@ -69,16 +70,7 @@ nav{
     background-color: grey;
     color: black;
 }
-
-
-
-
-
-
-
-
-
-
+/*Sezione scomparse*/
 .logo .icon h1{
     display: none;
 }
@@ -91,6 +83,26 @@ nav{
 .nav.bot hr{
     display: none;
 }
+
+/*Pulsante upgrade*/
+
+.button{
+    text-transform: uppercase;
+    border: 2px solid white ;
+    border-radius: 20px;
+    padding: 10px 30px;
+    position: absolute;
+    top: 30px;
+    right: 5px;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -126,7 +138,7 @@ nav{
     }
     
     main{
-    width: calc(100% - 150px);
+        width: calc(100% - 150px);
     }
 
     nav{
@@ -138,6 +150,7 @@ nav{
         justify-content: flex-start;
     }
     
+    /*Sezione comparse*/
     .logo .icon h1{
         display: block;
     }
