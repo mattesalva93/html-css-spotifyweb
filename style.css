@@ -1,3 +1,5 @@
+/*Struttura*/
+
 *{
     margin: 0;
     padding: 0;
@@ -10,15 +12,17 @@ body{
 }
 
 header{
-    min-height: 95vh;
-    width: 50px;
+    min-height: 91vh;
+    width: 30px;
     background-color: black;
     position: absolute;
+    color: white;
 }
 main{
-    width: 100vw;
+    width: calc(100% - 30px);
     height: 100%;
     background-color: green;
+    float: right;
     overflow-y: auto;
 }
 section{
@@ -34,13 +38,110 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 999;
 }
 
+/*Barra laterale navigazione*/
+
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.icon img{
+    height: 20px;
+}
+
+.logo .icon{
+    margin: 8px 0;
+}
+
+.icon a{
+    padding: 6px;
+    background-color: grey;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+.logo .icon h1{
+    display: none;
+}
+.icon span{
+    display: none;
+}
+.playlist{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Inizio mediaquery*/
 @media screen and (min-width: 577px) {
         
     header{
-        width: 200px;
+        width: 150px;
     }
     
-}
+    main{
+    width: calc(100% - 150px);
+    }
 
+    nav{
+        margin-left: 15px;
+    }
+    
+    .icon{
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .logo .icon h1{
+        display: block;
+    }
+    
+    .icon span{
+        display: block;
+    }
+
+    .playlist{
+        display: block;
+    }
+}
