@@ -98,7 +98,7 @@ p{
 .icon h5{
     display: none;
 }
-.icon span{
+.icon p{
     display: none;
 }
 .playlist{
@@ -117,7 +117,7 @@ p{
     padding: 10px 30px;
     position: absolute;
     top: 30px;
-    right: 5px;
+    right: 20px;
 }
 
 /*SEZIONE BOX CANZONI MAIN*/
@@ -173,10 +173,10 @@ p{
     text-align: center;
     width: 46%;
     margin-top: 15px;
-}
-.songbox{
     margin-right: 2%;
+    position: relative;
 }
+
 .songbox > h4{
     margin: 10px 0;
 }
@@ -268,6 +268,7 @@ footer{
     background-color: rgba(83,83,83, 0.9);
     height: 5px;
     border-radius: 20px;
+    position: relative;
 
 }
 
@@ -293,6 +294,89 @@ footer{
 }
 
 
+/*SEZIONE HOVER*/
+.songbox i.far.fa-play-circle{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: 75px;
+    display: none;
+    cursor: pointer;
+}
+.songbox:hover > img{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.songbox:hover > i.far.fa-play-circle{
+    display: inline-block;
+}
+nav p:hover, nav span:hover{
+    color: white;
+    cursor: pointer;
+}
+
+footer p:hover, footer span:hover{
+    color: white;
+    cursor: pointer;
+}
+.mainnav h5:hover{
+    color: white;
+    cursor: pointer;
+}
+.playlist .icon:hover a{
+    background-color: white;
+}
+.playlist .icon:hover  p{
+    color: white;
+}
+.button{
+    transition: all 1ms;
+    cursor: pointer;
+}
+.button:hover{
+    transform: scale(1.1);
+}
+.songinfo span:hover{
+    text-decoration: underline;
+}
+.songicon i:hover{
+    color: white;
+    cursor: pointer;
+}
+.pointbar{
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    display: none;
+}
+.fullbar:hover .pointbar{
+    display: block;
+}
+.fullbar:hover .currentbar{
+    background-color: greenyellow;
+    cursor: pointer;
+}
+.volbar:hover .pointbar{
+    display: block;
+}
+.volbar:hover .currentbar{
+    background-color: greenyellow;
+    cursor: pointer;
+}
+.playerbuttons i:hover{
+    cursor: pointer;
+}
+.playerbuttons .fas.fa-play-circle{
+    transition: all 1ms;
+}
+.playerbuttons .far.fa-play-circle:hover{
+    transform: scale(1.2);
+}    
 
 
 
@@ -382,7 +466,7 @@ footer{
         width: 1px;
         border-left:2px solid greenyellow;
     }
-}
+
 
 
 
@@ -399,13 +483,13 @@ footer{
     .icon h5{
         display: block;
     }
-    .icon span{
+    .icon p{
         display: block;
     }
     .playlist{
         display: block;
         margin-top: 15px;
-
+    }
 }
 
 @media screen and (min-width: 778px) {
