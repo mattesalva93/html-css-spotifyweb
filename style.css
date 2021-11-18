@@ -5,14 +5,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+#wrapper{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 
-header{
-    min-height: 92vh;
+nav{
+    height: calc(100vh - 100px);
     width: 30px;
     background-color: black;
     position: absolute;
@@ -20,9 +20,10 @@ header{
 }
 main{
     width: calc(100% - 30px);
-    height: 100%;
+    height: calc(100vh - 200px);
     background-color: green;
     float: right;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 section{
@@ -33,9 +34,9 @@ section{
 }
 
 footer{
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 100px;
-    background-color: blue;
+    background-color: azure;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -44,13 +45,13 @@ footer{
 
 /*Barra laterale navigazione*/
 
-nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 90vh;
+.nav.top{
+    height: calc(100% - 80px);
+    min-height: 80vh;
 }
-
+.nav.bot{
+    height: 80px;
+}
 .icon{
     display: flex;
     justify-content: center;
@@ -70,6 +71,7 @@ nav{
     background-color: grey;
     color: black;
 }
+
 /*Sezione scomparse*/
 .logo .icon h1{
     display: none;
@@ -103,37 +105,103 @@ nav{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 2vw;
 }
 .mainnav h5{
     text-transform: uppercase;
-    margin: 0 2.5vw;
 }
 
 /*Container grosso grosso canzoni*/
 
-.grid{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BARRA FOOTER*/
+
+footer{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
 }
-.songbox{
+
+/*Cover nome e icone della barra musica*/
+.foot.left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25%;
+}
+.foot.left .coversong > img{
+    height: 50px;
+}
+.songicon{
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+/*Riproduttore*/
+
+.foot.mid{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    height: auto;
-    width: 250px;
+    align-items: center;
+    width: 40%;
+    height: 100px;
 }
-.songbox img{
-    height: 250px;
+.playerbuttons ul li{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 12px;
 }
 
+.progressbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
 
+.fullbar{
+    background-color: rgba(83,83,83, 0.2);
+    width: 60%;
+    height: 2px;
+    align-self: center;
+}
+.currentbar{
+    width: 30%;
+    background-color: rgba(83,83,83, 0.9);
+    height: 2px;
+}
 
+/*Volume ed icone*/
 
+.foot.right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+}
+
+.volbar{
+    background-color: rgba(83,83,83, 0.2);
+    width: 100px;
+    height: 2px;
+    align-self: center;
+}
 
 
 
@@ -166,7 +234,7 @@ nav{
 /*Inizio mediaquery*/
 @media screen and (min-width: 577px) {
         
-    header{
+    nav{
         width: 150px;
     }
     
@@ -174,9 +242,6 @@ nav{
         width: calc(100% - 150px);
     }
 
-    nav{
-        margin-left: 15px;
-    }
     
     .icon{
         display: flex;
