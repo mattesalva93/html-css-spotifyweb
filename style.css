@@ -17,13 +17,13 @@ body{
 
 nav{
     height: calc(100vh - 100px);
-    width: 30px;
+    width: 50px;
     background-color: black;
     position: absolute;
     color: white;
 }
 main{
-    width: calc(100% - 30px);
+    width: calc(100% - 50px);
     height: calc(100vh - 200px);
     background-color: rgba(18,18,18,0.9);    
     float: right;
@@ -37,7 +37,6 @@ section{
     background-color: rgba(18,18,18,1);
     float: right;
 }
-
 footer{
     min-width: 100%;
     min-height: 100px;
@@ -52,6 +51,11 @@ span{
     color: grey;
     font-weight: bold;
 }
+p{
+    font-size: 12px;
+    color: grey;
+    font-weight: bold;
+}
 /*NAV LATERALE MENU*/
 
 .nav.top{
@@ -60,17 +64,31 @@ span{
 }
 .nav.bot{
     height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .icon{
     display: flex;
     justify-content: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-.icon img{
-    height: 20px;
+.nav.top .icon img{
+    height: 30px;
+}
+.nav.bot .icon:nth-of-type(1) img{
+    height: 15px;
 }
 
+.nav.bot .icon:nth-of-type(2) img{
+    width: 25px;
+    height: 25px;
+    background-color: grey;
+    color:white;
+    border-radius: 50%;
+    overflow: hidden;
+}
 .logo .icon{
     margin: 8px 0;
 }
@@ -111,18 +129,33 @@ span{
 
 /*Quel finto nav sopra le canzoni*/
 .mainnav{
-    height: 10vh;
-    line-height: 5vh;
+    height: 8vh;
+    line-height: 4vh;
     vertical-align: middle;
     text-align: center;
 }
+.mainnav > div{
+    display: inline-block;
+    position: relative;
+}
+.mainnav > div:before{
+    content : "";
+    position: absolute;
+    left: 25px;
+    bottom: 15px;
+    height: 1px;
+    width: 30px;
+    border-bottom:1px solid greenyellow;
+}
 .mainnav h6{
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 30px;
+    color: grey;
 }
 .mainnav h6{
     text-transform: uppercase;
 }
+
 
 /*Container grosso grosso canzoni*/
 
@@ -136,30 +169,34 @@ span{
 .row{
     display: flex;
     flex-direction: column;
+    margin-top: 25px;
 }
 .grid{
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 15px;
 }
 .songbox{
     text-align: center;
-    width: 48%;
+    width: 46%;
     max-width: 350px;
+    margin-top: 15px;
 }
-.songbox:nth-of-type(odd){
+.songbox{
     margin-right: 2%;
 }
-
+.songbox > h4{
+    margin: 10px 0;
+}
 .songbox > img{
     width: 100%;
     height: auto;
 }
-
 .row:nth-of-type(3) .songbox > img{
     border-radius: 50%;
 }
+
 
 
 
@@ -230,7 +267,7 @@ footer{
 
 .fullbar{
     background-color: rgba(83,83,83, 0.2);
-    width: 70%;
+    width: 60%;
     height: 5px;
     border-radius: 20px;
     margin: 0 5px;
@@ -254,7 +291,7 @@ footer{
 }
 .foot.right i{
     font-size: 12px;
-    margin-right: 8px;
+    margin-right: 7px;
 }
 .volbar{
     background-color: rgba(83,83,83, 0.2);
