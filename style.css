@@ -47,7 +47,11 @@ footer{
     left: 0;
     z-index: 999;
 }
-
+span{
+    font-size: 10px;
+    color: grey;
+    font-weight: bold;
+}
 /*NAV LATERALE MENU*/
 
 .nav.top{
@@ -171,17 +175,22 @@ footer{
 /*Cover nome e icone della barra musica*/
 .foot.left{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
     width: 25%;
 }
+
 .foot.left .coversong > img{
-    height: 50px;
+    height: 30px;
+    margin: 0 5px;
 }
-.songicon{
+.songinfo{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+.songicon{
+    margin: 0 10px;
+    color: grey;
 }
 
 /*Riproduttore*/
@@ -191,32 +200,47 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 45%;
     height: 100px;
+}
+.playerbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 45%;
 }
 .playerbuttons ul li{
     text-decoration: none;
     display: inline-block;
-    margin: 0 5px;
+    font-size: 20px;
+    margin: 0 10px;
+}
+.playerbuttons ul li i.far.fa-play-circle{
+    font-size: 30px;
 }
 
 .progressbar{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 55%;
 }
 
 .fullbar{
     background-color: rgba(83,83,83, 0.2);
-    width: 60%;
-    height: 2px;
-    align-self: center;
+    width: 70%;
+    height: 5px;
+    border-radius: 20px;
+    margin: 0 5px;
 }
 .currentbar{
     width: 30%;
     background-color: rgba(83,83,83, 0.9);
-    height: 2px;
+    height: 5px;
+    border-radius: 20px;
+
 }
 
 /*Volume ed icone*/
@@ -226,14 +250,18 @@ footer{
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    width: 25%;
+    width: 30%;
 }
-
+.foot.right i{
+    font-size: 12px;
+    margin-right: 8px;
+}
 .volbar{
     background-color: rgba(83,83,83, 0.2);
     width: 100px;
-    height: 2px;
+    height: 5px;
     align-self: center;
+    margin-right: 5px;
 }
 
 
