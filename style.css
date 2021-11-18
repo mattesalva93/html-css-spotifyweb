@@ -20,7 +20,6 @@ nav{
     width: 50px;
     background-color: black;
     position: absolute;
-    color: white;
 }
 main{
     width: calc(100% - 50px);
@@ -64,14 +63,11 @@ p{
 }
 .nav.bot{
     height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 .icon{
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .nav.top .icon img{
@@ -88,19 +84,19 @@ p{
     color:white;
     border-radius: 50%;
     overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 .logo .icon{
-    margin: 8px 0;
+    margin: 15px 0;
 }
 
-.icon a{
-    padding: 6px;
-    background-color: grey;
-    color: black;
-}
 
 /*Sezione scomparse*/
-.logo .icon h1{
+.logo .icon img:nth-of-type(2){
+    display: none;
+}
+.icon h5{
     display: none;
 }
 .icon span{
@@ -329,41 +325,76 @@ footer{
 
 
 
-/*Inizio mediaquery*/
+/*Inizio mediaquery tablet */
+
 @media screen and (min-width: 577px) {
-        
-    nav{
-        width: 150px;
-    }
     
+    /*Cambi di struttura*/  
+
+    nav{
+        width: 175px;
+        padding-left: 15px;
+    }
     main{
-        width: calc(100% - 150px);
+        width: calc(100% - 175px);
     }
     section{
-        width: calc(100% - 150px);
+        width: calc(100% - 175px);
 
     }
-    
+    /*Cambi nel nav*/
+
     .icon{
-        display: flex;
         justify-content: flex-start;
+        align-items: center;
     }
+    .logo{
+        margin-bottom: 20px;
+    }
+
+
     
     /*Sezione comparse*/
-    .logo .icon h1{
+    .logo .icon img:nth-of-type(1){
+        display: none;
+    }
+    .logo .icon img:nth-of-type(2){
+        display: inline-block;
+        height: 40px;
+        vertical-align: text-top;
+    }
+    .icon h5{
         display: block;
     }
-    
     .icon span{
         display: block;
     }
-
     .playlist{
         display: block;
+        margin-top: 15px;
+    }
+    .playlist > h3{
+        margin-bottom: 10px;
+    }
+    
+    .icon a{
+    padding: 6px 9px;
+    background-color: grey;
+    color: black;
+    margin-right: 5px;
     }
 
+    .playlist > p{
+        margin: 15px 0;
+    }
+    .nav.bot .icon  img{
+        margin-right: 10px;
+    }
     .nav.bot hr{
         display: block;
+        background-color: grey;
+        border-color: grey;
     }
+
     
 }
