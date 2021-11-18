@@ -27,7 +27,7 @@ main{
     overflow-y: auto;
 }
 section{
-    width: 95%;
+    width: calc(100% - 30px);
     min-height: 100px;
     background-color: violet;
     float: right;
@@ -43,7 +43,7 @@ footer{
     z-index: 999;
 }
 
-/*Barra laterale navigazione*/
+/*NAV LATERALE MENU*/
 
 .nav.top{
     height: calc(100% - 80px);
@@ -86,7 +86,7 @@ footer{
     display: none;
 }
 
-/*Pulsante upgrade*/
+/*PULSANTE UPGRADE SECTION*/
 
 .button{
     text-transform: uppercase;
@@ -98,13 +98,15 @@ footer{
     right: 5px;
 }
 
-/*Sezione canzoni*/
+/*SEZIONE BOX CANZONI MAIN*/
 
 /*Quel finto nav sopra le canzoni*/
 .mainnav{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
+    height: 10vh;
 }
 .mainnav h5{
     text-transform: uppercase;
@@ -112,17 +114,40 @@ footer{
 
 /*Container grosso grosso canzoni*/
 
+.clearfix{
+    content: "";
+    display: table;
+    content: both;
+}
+.row:nth-of-type(2), .row:nth-of-type(3){
+    margin-top: 2.5vh;
+}
+.row:nth-of-type(3){
+    margin-bottom: 50px;
+}
+.grid{
+    margin-top: 40px;
+}
+.row{
+    margin: 0 10px;
+}
+.songbox{
+    float: left;
+    text-align: center;
+    width: calc(50% - 20px);
+    overflow: hidden;
+}
 
+.songbox > img{
+    height: 200px;
+    width: auto;
+}
 
-
-
-
-
-
-
-
-
-
+.row:nth-of-type(3) .songbox > img{
+    height: 200px;
+    width: auto;
+    border-radius: 50%;
+}
 
 
 
@@ -164,7 +189,7 @@ footer{
 .playerbuttons ul li{
     text-decoration: none;
     display: inline-block;
-    margin: 0 12px;
+    margin: 0 5px;
 }
 
 .progressbar{
@@ -241,7 +266,10 @@ footer{
     main{
         width: calc(100% - 150px);
     }
+    section{
+        width: calc(100% - 150px);
 
+    }
     
     .icon{
         display: flex;
