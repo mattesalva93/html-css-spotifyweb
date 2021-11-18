@@ -107,13 +107,16 @@ footer{
 
 /*Quel finto nav sopra le canzoni*/
 .mainnav{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
     height: 10vh;
+    line-height: 5vh;
+    vertical-align: middle;
+    text-align: center;
 }
-.mainnav h5{
+.mainnav h6{
+    display: inline-block;
+    margin-right: 15px;
+}
+.mainnav h6{
     text-transform: uppercase;
 }
 
