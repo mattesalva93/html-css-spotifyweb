@@ -176,6 +176,7 @@ p{
     position: relative;
 }
 .songbox > h4{
+    opacity: 0.8;
     margin: 10px 0;
 }
 .songbox  img{
@@ -312,7 +313,7 @@ footer{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 75px;
+    font-size: 60px;
     display: none;
     cursor: pointer;
 }
@@ -323,10 +324,14 @@ footer{
 .songbox:hover i.far.fa-play-circle{
     display: inline-block;
 }
-.songbox h4:hover, .songbox p:hover{
+.songbox p:hover{
     text-decoration: underline;
     cursor: pointer;
 }
+.songbox h4:hover{
+    cursor: pointer;
+    opacity: 1;
+} 
 
 nav p:hover, nav span:hover{
     color: white;
