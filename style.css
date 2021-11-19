@@ -255,6 +255,9 @@ footer{
     width: 100%;
     height: 55%;
 }
+.progressbar span{
+    color: white;
+}
 
 .fullbar{
     background-color: rgba(83,83,83, 0.2);
@@ -295,6 +298,9 @@ footer{
 
 
 /*SEZIONE HOVER*/
+.nav img{
+    cursor: pointer;
+}
 .songbox i.far.fa-play-circle{
     position:absolute;
     top: 50%;
@@ -311,13 +317,21 @@ footer{
 .songbox:hover > i.far.fa-play-circle{
     display: inline-block;
 }
+.songbox h4:hover, .songbox p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 nav p:hover, nav span:hover{
     color: white;
     cursor: pointer;
 }
 
-footer p:hover, footer span:hover{
+footer p:hover, .foot.left span:hover{
     color: white;
+    cursor: pointer;
+}
+footer i:hover{
     cursor: pointer;
 }
 .mainnav h5:hover{
@@ -353,23 +367,19 @@ footer p:hover, footer span:hover{
     top: -3px;
     right: -3px;
     display: none;
+    cursor: pointer;
 }
 .fullbar:hover .pointbar{
     display: block;
 }
 .fullbar:hover .currentbar{
     background-color: greenyellow;
-    cursor: pointer;
 }
 .volbar:hover .pointbar{
     display: block;
 }
 .volbar:hover .currentbar{
     background-color: greenyellow;
-    cursor: pointer;
-}
-.playerbuttons i:hover{
-    cursor: pointer;
 }
 .playerbuttons .fas.fa-play-circle{
     transition: all 1ms;
@@ -503,7 +513,7 @@ footer p:hover, footer span:hover{
         flex-wrap: nowrap;
     }
     .songbox{
-        max-width: 350px;
+        max-width: 320px;
     }
 
 
