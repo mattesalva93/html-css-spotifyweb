@@ -125,8 +125,8 @@ p{
 
 /*Quel finto nav sopra le canzoni*/
 .mainnav{
-    min-height: 8vh;
-    line-height: 4vh;
+    min-height: 100px;
+    line-height: 50px;
     text-align: center;
 }
 .mainnav > div{
@@ -136,10 +136,10 @@ p{
 .mainnav > div:before{
     content : "";
     position: absolute;
-    left: 20%;
-    bottom: 15%;
+    left: 27px;
+    bottom: 5px;
     height: 1px;
-    width: 30px;
+    width: 40px;
     border-bottom:1px solid greenyellow;
 }
 .mainnav h5{
@@ -445,10 +445,10 @@ footer i:hover{
     }
 
     .icon a{
-    padding: 6px 9px;
-    background-color: grey;
-    color: black;
-    margin-right: 5px;
+        padding: 6px 9px;
+        background-color: grey;
+        color: black;
+        margin-right: 5px;
     }
 
     .playlist > p{
@@ -503,18 +503,19 @@ footer i:hover{
 
 @media screen and (min-width: 778px) {
     .songbox{
-        max-width: 150px;
+        max-width: 20%;
     }
 }
 
 @media screen and (min-width: 1025px) {
+    
+    .songbox{
+        max-width: 13%
+    }
     .grid{
         flex-wrap: nowrap;
     }
-    .songbox{
-        max-width: 12%
-    }
-
-
+    
+    
 
 }
