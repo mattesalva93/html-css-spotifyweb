@@ -171,13 +171,14 @@ p{
     width: 46%;
     margin-top: 15px;
     margin-right: 2%;
+}
+.playwrapper{
     position: relative;
 }
-
 .songbox > h4{
     margin: 10px 0;
 }
-.songbox > img{
+.songbox  img{
     width: 100%;
     height: auto;
 }
@@ -306,20 +307,20 @@ footer{
 .nav img{
     cursor: pointer;
 }
-.songbox i.far.fa-play-circle{
+.playwrapper i.far.fa-play-circle{
     position:absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -50%);
     font-size: 75px;
     display: none;
     cursor: pointer;
 }
-.songbox:hover > img{
+.songbox:hover  img{
     opacity: 0.5;
     cursor: pointer;
 }
-.songbox:hover > i.far.fa-play-circle{
+.songbox:hover i.far.fa-play-circle{
     display: inline-block;
 }
 .songbox h4:hover, .songbox p:hover{
@@ -484,7 +485,7 @@ footer i:hover{
         bottom: -1px;
         height: 30px;
         width: 1px;
-        border-left:2px solid yellowgreen;
+        border-left:2px solid seagreen;
     }
 
 
@@ -514,7 +515,7 @@ footer i:hover{
 
 @media (min-width: 778px) {
     .songbox{
-        max-width: 20%;
+        max-width:20%;
     }
     .songicon i{
         margin-left: 10px;
