@@ -207,7 +207,7 @@ footer{
 }
 
 .foot.left .coversong > img{
-    height: 30px;
+    height: 40px;
     margin: 0 5px;
 }
 .songinfo{
@@ -218,6 +218,9 @@ footer{
 .songicon{
     margin: 0 10px;
     color: grey;
+}
+.foot.left span{
+    font-size: 12px;
 }
 
 /*Riproduttore*/
@@ -284,8 +287,8 @@ footer{
     width: 30%;
 }
 .foot.right i{
-    font-size: 12px;
-    margin-right: 7px;
+    font-size: 15px;
+    margin-right: 12px;
 }
 .volbar{
     background-color: rgba(83,83,83, 0.2);
